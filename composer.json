@@ -18,9 +18,23 @@
         "league/commonmark": "0.13.*@dev"
     },
     "require-dev": {
+        "jgm/SmartPunct": "0.24",
         "phpunit/phpunit" : "4.*",
         "scrutinizer/ocular": "~1.1"
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "jgm/SmartPunct",
+                "version": "0.24",
+                "dist": {
+                    "url": "https://raw.githubusercontent.com/jgm/commonmark.js/0.24.0/test/smart_punct.txt",
+                    "type": "file"
+                }
+            }
+        }
+    ],
     "autoload": {
         "psr-4": {
             "League\\CommonMark\\Extras\\": "src"

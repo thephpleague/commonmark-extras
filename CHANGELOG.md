@@ -6,3 +6,4 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ### Added
  - Created this new library
+ - Added the SmartPunct functionality from the league/commonmark project
