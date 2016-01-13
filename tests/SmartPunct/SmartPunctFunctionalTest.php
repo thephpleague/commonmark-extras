@@ -18,7 +18,7 @@ use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Converter;
 use League\CommonMark\DocParser;
 use League\CommonMark\Environment;
-use League\CommonMark\Extension\SmartPunctExtension;
+use League\CommonMark\Extras\SmartPunct\SmartPunctExtension;
 use League\CommonMark\HtmlRenderer;
 
 /**
