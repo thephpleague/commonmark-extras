@@ -77,9 +77,9 @@ This library is licensed under the BSD-3 license.  See the [License File](LICENS
 [ico-downloads]: https://img.shields.io/packagist/dt/league/commonmark-extras.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/league/commonmark-extras
-[link-travis]: https://travis-ci.org/league/commonmark-extras
-[link-scrutinizer]: https://scrutinizer-ci.com/g/league/commonmark-extras/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/league/commonmark-extras
+[link-travis]: https://travis-ci.org/thephpleague/commonmark-extras
+[link-scrutinizer]: https://scrutinizer-ci.com/g/thephpleague/commonmark-extras/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/thephpleague/commonmark-extras
 [link-downloads]: https://packagist.org/packages/league/commonmark-extras
 [link-author]: https://github.com/colinodell
 [link-contributors]: ../../contributors
