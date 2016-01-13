@@ -70,10 +70,10 @@ If you discover any security related issues, please email colinodell@gmail.com i
 This library is licensed under the BSD-3 license.  See the [License File](LICENSE.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/league/commonmark-extras.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/league/commonmark-extras/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/league/commonmark-extras.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/league/commonmark-extras.svg?style=flat-square
+[ico-license]: http://img.shields.io/badge/License-BSD--3-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/thephpleague/commonmark-extras/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/thephpleague/commonmark-extras.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/thephpleague/commonmark-extras.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/league/commonmark-extras.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/league/commonmark-extras
