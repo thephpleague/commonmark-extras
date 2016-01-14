@@ -28,7 +28,7 @@ New extensions and features should adhere to the following guidelines:
 
 - **Send coherent history** - Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash them](http://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) before submitting.
 
-- **Docblocks** - All files should contain the following docblock up top:
+- **Docblocks** - All files should start with the following docblock:
 
 ~~~
 /*
