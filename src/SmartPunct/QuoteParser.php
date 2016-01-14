@@ -40,16 +40,9 @@ class QuoteParser extends AbstractInlineParser
      */
     public function parse(InlineParserContext $inlineContext)
     {
-        $character = $inlineContext->getCursor()->getCharacter();
-        if (in_array($character, $this->double)) {
-            $character = '“';
-        } elseif (in_array($character, $this->single)) {
-            $character = '’';
-        } else {
-            return false;
-        }
-
         $cursor = $inlineContext->getCursor();
+        $character = $this->getCharacterType($cursor->getCharacter());
+
         $charBefore = $cursor->peek(-1);
         if ($charBefore === null) {
             $charBefore = "\n";
@@ -62,6 +55,41 @@ class QuoteParser extends AbstractInlineParser
             $charAfter = "\n";
         }
 
+        list($leftFlanking, $rightFlanking) = $this->determineFlanking($charBefore, $charAfter);
+        $canOpen = $leftFlanking && !$rightFlanking;
+        $canClose = $rightFlanking;
+
+        $node = new Text($character, ['delim' => true]);
+        $inlineContext->getContainer()->appendChild($node);
+
+        // Add entry to stack to this opener
+        $inlineContext->getDelimiterStack()->push(new Delimiter($character, 1, $node, $canOpen, $canClose));
+
+        return true;
+    }
+
+    /**
+     * @param string $character
+     *
+     * @return string|null
+     */
+    private function getCharacterType($character)
+    {
+        if (in_array($character, $this->double)) {
+            return '“';
+        } elseif (in_array($character, $this->single)) {
+            return '’';
+        }
+    }
+
+    /**
+     * @param string $charBefore
+     * @param string $charAfter
+     *
+     * @return string[]
+     */
+    private function determineFlanking($charBefore, $charAfter)
+    {
         $afterIsWhitespace = preg_match('/\pZ|\s/u', $charAfter);
         $afterIsPunctuation = preg_match(RegexHelper::REGEX_PUNCTUATION, $charAfter);
         $beforeIsWhitespace = preg_match('/\pZ|\s/u', $charBefore);
@@ -77,17 +105,6 @@ class QuoteParser extends AbstractInlineParser
                 !$afterIsWhitespace &&
                 !$afterIsPunctuation);
 
-        $canOpen = $leftFlanking && !$rightFlanking;
-        $canClose = $rightFlanking;
-
-        $node = new Text($character, ['delim' => true]);
-        $inlineContext->getContainer()->appendChild(
-            $node
-        );
-
-        // Add entry to stack to this opener
-        $inlineContext->getDelimiterStack()->push(new Delimiter($character, 1, $node, $canOpen, $canClose));
-
-        return true;
+        return [$leftFlanking, $rightFlanking];
     }
 }
