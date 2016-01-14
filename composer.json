@@ -15,7 +15,7 @@
     ],
     "require": {
         "php" : ">=5.4.8",
-        "league/commonmark": "0.13.*@dev"
+        "league/commonmark": "~0.13.0"
     },
     "require-dev": {
         "jgm/SmartPunct": "0.24",
@@ -50,7 +50,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.1-dev"
+            "dev-master": "0.2-dev"
         }
     }
 }
