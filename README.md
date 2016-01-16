@@ -23,9 +23,8 @@ $ composer require league/commonmark-extras
 Extensions can be added to any new `Environment`:
 
 ``` php
-use League\CommonMark\DocParser;
+use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
-use League\CommonMark\HtmlRenderer;
 new League\CommonMark\Extras\SmartPunct\SmartPunctExtension;
 
 // Obtain a pre-configured Environment with all the CommonMark parsers/renderers ready-to-go
@@ -34,8 +33,11 @@ $environment = Environment::createCommonMarkEnvironment();
 // ADD YOUR OWN EXTENSIONS HERE. For example:
 $environment->addExtension(new SmartPunctExtension());
 
+// Define your configuration:
+$config = [];
+
 // Now that the `Environment` is configured we can create the converter engine:
-$converter = new CommonMarkConvert($environment);
+$converter = new CommonMarkConverter($config, $environment);
 
 // Go forth and convert you some Markdown!
 echo $converter->convertToHtml('# Hello World!');
