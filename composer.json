@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "jgm/SmartPunct": "0.24",
-        "phpunit/phpunit" : "4.*",
+        "phpunit/phpunit" : "~4.3|~5.0",
         "scrutinizer/ocular": "~1.1"
     },
     "repositories": [
