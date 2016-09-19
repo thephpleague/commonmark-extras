@@ -15,7 +15,7 @@
     ],
     "require": {
         "php" : ">=5.4.8",
-        "league/commonmark": "^0.13|^0.14"
+        "league/commonmark": "^0.13|^0.14|^0.15"
     },
     "require-dev": {
         "jgm/SmartPunct": "0.26",
