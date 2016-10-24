@@ -25,7 +25,7 @@ Extensions can be added to any new `Environment`:
 ``` php
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
-new League\CommonMark\Extras\SmartPunct\SmartPunctExtension;
+use League\CommonMark\Extras\SmartPunct\SmartPunctExtension;
 
 // Obtain a pre-configured Environment with all the CommonMark parsers/renderers ready-to-go
 $environment = Environment::createCommonMarkEnvironment();
