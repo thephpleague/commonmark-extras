@@ -4,6 +4,10 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+## [0.1.4] - 2017-12-31
+### Changed
+ - Added league/commonmark 0.17 as a compatible version
+
 ## [0.1.3] - 2017-10-30
 ### Changed
  - Added league/commonmark 0.16 as a compatible version
@@ -27,7 +31,8 @@ All Notable changes to `commonmark-extras` will be documented in this file
 ### Changed
  - Minor refactoring to SmartPunct's `QuoteParser` to reduce complexity
 
-[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.1.3...HEAD
+[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.1.4...HEAD
+[0.1.4]: https://github.com/thephpleague/commonmark-extras/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/thephpleague/commonmark/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/thephpleague/commonmark/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/thephpleague/commonmark/compare/0.1.0...0.1.1
