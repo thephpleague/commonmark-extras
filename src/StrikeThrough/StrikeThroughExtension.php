@@ -5,6 +5,10 @@ namespace League\CommonMark\Extras\StrikeThrough;
 use League\CommonMark\Extension\Extension;
 
 class StrikeThroughExtension extends Extension {
+
+    /**
+     * {@inheritdoc}
+     */
     public function getInlineParsers()
     {
         return [
@@ -12,6 +16,9 @@ class StrikeThroughExtension extends Extension {
         ];
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getInlineRenderers()
     {
         return [
