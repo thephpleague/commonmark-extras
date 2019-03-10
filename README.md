@@ -43,6 +43,19 @@ $converter = new CommonMarkConverter($config, $environment);
 echo $converter->convertToHtml('# Hello World!');
 ```
 
+## Extensions
+
+### SmartPunctExtension
+
+Enables Smart punctuation:
+Open quotes are matched with closed quotes.
+
+### TwitterHandleAutolink
+
+A Twitter autolink handler. Renders `@handle` as `https://twitter.com/@handle` link
+
+See [Inline Parsing Example](https://commonmark.thephpleague.com/customization/inline-parsing/#example-1---twitter-handles)
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
