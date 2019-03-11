@@ -42,7 +42,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "League\\CommonMark\\Extras\\Test\\": "tests"
+            "League\\CommonMark\\Extras\\Tests\\": "tests"
         }
     },
     "scripts": {
