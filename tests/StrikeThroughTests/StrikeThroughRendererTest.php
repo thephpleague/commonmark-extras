@@ -28,7 +28,7 @@ class StrikeThroughRendererTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($result instanceof HtmlElement);
         $this->assertEquals('del', $result->getTagName());
         $this->assertContains('reviewed text', $result->getContents(true));
-        $this->assertEquals(['id' => 'some&quot;&amp;id'], $result->getAllAttributes());
+        $this->assertEquals(['id' => 'some"&amp;id'], $result->getAllAttributes());
     }
 
     /**
