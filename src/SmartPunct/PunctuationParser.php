@@ -14,62 +14,13 @@
 
 namespace League\CommonMark\Extras\SmartPunct;
 
-use League\CommonMark\Inline\Element\Text;
-use League\CommonMark\Inline\Parser\AbstractInlineParser;
-use League\CommonMark\InlineParserContext;
+use League\CommonMark\Ext\SmartPunct as BaseExtension;
 
-class PunctuationParser extends AbstractInlineParser
+@trigger_error('The SmartPunct extension has been moved to league/commonmark-ext-smartpunct', E_USER_DEPRECATED);
+
+/**
+ * @deprecated Install and use league/commonmark-ext-smartpunct instead
+ */
+class PunctuationParser extends BaseExtension\PunctuationParser
 {
-    /**
-     * @return string[]
-     */
-    public function getCharacters()
-    {
-        return ['-', '.'];
-    }
-
-    /**
-     * @param InlineParserContext $inlineContext
-     *
-     * @return bool
-     */
-    public function parse(InlineParserContext $inlineContext)
-    {
-        $cursor = $inlineContext->getCursor();
-        $ch = $cursor->getCharacter();
-
-        // Ellipses
-        if ($ch === '.' && $matched = $cursor->match('/^\\.( ?\\.)\\1/')) {
-            $inlineContext->getContainer()->appendChild(new Text('…'));
-
-            return true;
-        }
-
-        // Em/En-dashes
-        elseif ($ch === '-' && $matched = $cursor->match('/^(?<!-)(-{2,})/')) {
-            $count = strlen($matched);
-            $en_dash = '–';
-            $en_count = 0;
-            $em_dash = '—';
-            $em_count = 0;
-            if ($count % 3 === 0) { // If divisible by 3, use all em dashes
-                $em_count = $count / 3;
-            } elseif ($count % 2 === 0) { // If divisible by 2, use all en dashes
-                $en_count = $count / 2;
-            } elseif ($count % 3 === 2) { // If 2 extra dashes, use en dash for last 2; em dashes for rest
-                $em_count = ($count - 2) / 3;
-                $en_count = 1;
-            } else { // Use en dashes for last 4 hyphens; em dashes for rest
-                $em_count = ($count - 4) / 3;
-                $en_count = 2;
-            }
-            $inlineContext->getContainer()->appendChild(new Text(
-                str_repeat($em_dash, $em_count) . str_repeat($en_dash, $en_count)
-            ));
-
-            return true;
-        }
-
-        return false;
-    }
 }

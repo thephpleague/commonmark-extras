@@ -15,27 +15,14 @@
     ],
     "require": {
         "php" : ">=5.4.8",
-        "league/commonmark": "^0.13|^0.14|^0.15|^0.16|^0.17|^0.18"
+        "league/commonmark": "^0.13|^0.14|^0.15|^0.16|^0.17|^0.18",
+        "league/commonmark-ext-smartpunct": "^0.1"
     },
     "require-dev": {
-        "jgm/SmartPunct": "0.28",
         "phpunit/phpunit" : "~4.3|~5.0",
         "scrutinizer/ocular": "~1.1",
         "sebastian/comparator": ">=1.2.3"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "jgm/SmartPunct",
-                "version": "0.28",
-                "dist": {
-                    "url": "https://raw.githubusercontent.com/jgm/commonmark.js/0.28.0/test/smart_punct.txt",
-                    "type": "file"
-                }
-            }
-        }
-    ],
     "autoload": {
         "psr-4": {
             "League\\CommonMark\\Extras\\": "src"

@@ -14,51 +14,13 @@
 
 namespace League\CommonMark\Extras\SmartPunct;
 
-use League\CommonMark\Block\Renderer as CoreBlockRenderer;
-use League\CommonMark\Extension\Extension;
-use League\CommonMark\Inline\Renderer as CoreInlineRenderer;
+use League\CommonMark\Ext\SmartPunct as BaseExtension;
 
-class SmartPunctExtension extends Extension
+@trigger_error('The SmartPunct extension has been moved to league/commonmark-ext-smartpunct', E_USER_DEPRECATED);
+
+/**
+ * @deprecated Install and use league/commonmark-ext-smartpunct instead
+ */
+class SmartPunctExtension extends BaseExtension\SmartPunctExtension
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getInlineParsers()
-    {
-        return [
-            new QuoteParser(),
-            new PunctuationParser(),
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getInlineProcessors()
-    {
-        return [
-            new QuoteProcessor(),
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getBlockRenderers()
-    {
-        return [
-            'League\CommonMark\Block\Element\Document'  => new CoreBlockRenderer\DocumentRenderer(),
-            'League\CommonMark\Block\Element\Paragraph' => new CoreBlockRenderer\ParagraphRenderer(),
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getInlineRenderers()
-    {
-        return [
-            'League\CommonMark\Inline\Element\Text' => new CoreInlineRenderer\TextRenderer(),
-        ];
-    }
 }
