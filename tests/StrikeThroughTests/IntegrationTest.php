@@ -1,11 +1,10 @@
 <?php
-namespace CommonMarkExt\tests\StrikethroughTests;
+namespace League\CommonMark\Extras\Tests\StrikeThroughTests;
 
-use CommonMarkExt\Strikethrough\StrikethroughParser;
-use CommonMarkExt\Strikethrough\StrikethroughRenderer;
-use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\DocParser;
 use League\CommonMark\Environment;
+use League\CommonMark\Extras\StrikeThrough\StrikeThroughParser;
+use League\CommonMark\Extras\StrikeThrough\StrikeThroughRenderer;
 use League\CommonMark\HtmlRenderer;
 
 class IntegrationTest extends \PHPUnit_Framework_TestCase
@@ -17,11 +16,11 @@ class IntegrationTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider dataForIntegrationTest
      */
-    public function testStrikethrough($string, $expected)
+    public function testStrikeThrough($string, $expected)
     {
         $environment = Environment::createCommonMarkEnvironment();
-        $environment->addInlineParser(new StrikethroughParser());
-        $environment->addInlineRenderer('CommonMarkExt\Strikethrough\Strikethrough', new StrikethroughRenderer());
+        $environment->addInlineParser(new StrikeThroughParser());
+        $environment->addInlineRenderer('League\CommonMark\Extras\StrikeThrough\StrikeThroughElement', new StrikeThroughRenderer());
 
         $parser = new DocParser($environment);
         $renderer = new HtmlRenderer($environment);
@@ -29,10 +28,6 @@ class IntegrationTest extends \PHPUnit_Framework_TestCase
         $document = $parser->parse($string);
 
         $html = $renderer->renderBlock($document);
-//
-//        $converter = new CommonMarkConverter($environment->getConfig());
-//        $html = $converter->convertToHtml($string);
-
         $this->assertSame($expected, $html);
     }
 

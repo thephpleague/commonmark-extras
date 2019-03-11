@@ -1,13 +1,13 @@
 <?php
-namespace CommonMarkExt\Tests\Strikethrough;
 
-use CommonMarkExt\Strikethrough\Strikethrough;
-use CommonMarkExt\Strikethrough\StrikethroughRenderer;
-use CommonMarkExt\Tests\FakeHtmlRenderer;
+namespace League\CommonMark\Extras\Tests\StrikeThroughTests;
+
+use League\CommonMark\Extras\StrikeThrough\StrikeThroughElement;
+use League\CommonMark\Extras\StrikeThrough\StrikeThroughRenderer;
 use League\CommonMark\HtmlElement;
 use League\CommonMark\Inline\Renderer\CodeRenderer;
 
-class StrikethroughRendererTest extends \PHPUnit_Framework_TestCase
+class StrikeThroughRendererTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var CodeRenderer
@@ -16,12 +16,12 @@ class StrikethroughRendererTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->renderer = new StrikethroughRenderer();
+        $this->renderer = new StrikeThroughRenderer();
     }
 
     public function testRender()
     {
-        $inline = new Strikethrough('reviewed text');
+        $inline = new StrikeThroughElement('reviewed text');
         $inline->data['attributes'] = ['id' => 'some"&amp;id'];
         $fake_renderer = new FakeHtmlRenderer();
         $result = $this->renderer->render($inline, $fake_renderer);

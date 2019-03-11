@@ -14,7 +14,7 @@
  * file that was distributed with this source code: https://github.com/thephpleague/commonmark/blob/master/LICENSE
  */
 
-namespace CommonMarkExt\Tests;
+namespace League\CommonMark\Extras\Tests\StrikeThroughTests;
 
 use League\CommonMark\Block\Element\AbstractBlock;
 use League\CommonMark\ElementRendererInterface;
