@@ -6,11 +6,11 @@ We accept contributions via Pull Requests on [Github](https://github.com/thephpl
 
 ## New Extensions & Features
 
-New extensions and features should adhere to the following guidelines:
+New extensions and features will only be considered if they meet all of the following criteria:
 
-1. No external dependencies.  Only plain PHP code is allowed.
-2. Avoid recommended dependencies.  If you really need something, mention it in the PR and we'll consider your request.
-3. Contributions must have a common use case which other people may find useful.
+1. The extension/feature is bundled as a standalone extension, preferably under the PHP League.
+2. External dependencies should be avoided where possible - use plain PHP code and common extensions.
+3. Contributions must have a common use case found in other flavors of Markdown like GFM which other people may find useful.
 
 ## Pull Requests
 
@@ -37,9 +37,6 @@ New extensions and features should adhere to the following guidelines:
  * (c) Colin O'Dell <colinodell@gmail.com>
  *
  * Authored by Your Name <youremail@domain.com>
- *
- * Original code based on the CommonMark JS reference parser (http://bitly.com/commonmark-js)
- *  - (c) John MacFarlane
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.

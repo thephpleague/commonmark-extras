@@ -4,6 +4,25 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+**All previous functionality has been removed and placed into separate packages!** This library now serves as a meta-package to pull in officially-recommended extensions.
+
+### Added
+
+ - Added [league/commonmark-ext-autolink](https://github.com/thephpleague/commonmark-ext-autolink) and [league/commonmark-ext-smartpunct](https://github.com/thephpleague/commonmark-ext-smartpunct) as dependencies
+ - Added `CommonMarkExtrasExtension` to pull in both of the libraries above
+
+### Changed
+
+ - Moved SmartPunct into its own package: <https://github.com/thephpleague/commonmark-ext-inlines-only>
+ - Moved the Twitter handle parsing into its own package: <https://github.com/thephpleague/commonmark-ext-autolink>
+ - Bumped the minimum PHP version up to 5.6
+ - Bumped the minimum [league/commonmark](https://github.com/thephpleague/commonmark) version to 0.18.1
+
+### Removed
+
+ - Removed all classes implementing SmartPunct and Twitter handle parsing as those now live elsewhere
+ - Removed support for PHP 5.4, PHP 5.5, and HHVM
+
 ## [0.1.5] - 2018-09-28
 ### Changed
  - Added league/commonmark 0.18 as a compatible version

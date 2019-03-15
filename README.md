@@ -10,6 +10,13 @@
 **league/commonmark-extras** is a collection of useful extensions and utilities
 for the [league/commonmark][link-league-commonmark] project.
 
+Adding this extension to your project will automatically register these sub-extensions:
+
+| **Extension** | **Purpose** |
+| :------------ | :---------- |
+| [league/commonmark-ext-autolink](https://github.com/thephpleague/commonmark-ext-autolink) | Automatically creating links to URLs and email address (without needing the `<...>` syntax) |
+| [league/commonmark-ext-smartpunct](https://github.com/thephpleague/commonmark-ext-smartpunct) | Intelligently converts ASCII quotes, dashes, and ellipses to their Unicode equivalents |
+
 ## Install
 
 Via Composer
@@ -20,18 +27,18 @@ $ composer require league/commonmark-extras
 
 ## Usage
 
-Extensions can be added to any new `Environment`:
+This can be added to any new `Environment`:
 
 ``` php
 use League\CommonMark\CommonMarkConverter;
 use League\CommonMark\Environment;
-use League\CommonMark\Extras\SmartPunct\SmartPunctExtension;
+use League\CommonMark\Extras\CommonMarkExtrasExtension;
 
 // Obtain a pre-configured Environment with all the CommonMark parsers/renderers ready-to-go
 $environment = Environment::createCommonMarkEnvironment();
 
-// ADD YOUR OWN EXTENSIONS HERE. For example:
-$environment->addExtension(new SmartPunctExtension());
+// REGISTER THIS EXTENSION HERE
+$environment->addExtension(new CommonMarkExtrasExtension());
 
 // Define your configuration:
 $config = [];
@@ -43,19 +50,6 @@ $converter = new CommonMarkConverter($config, $environment);
 echo $converter->convertToHtml('# Hello World!');
 ```
 
-## Extensions
-
-### SmartPunctExtension
-
-Enables Smart punctuation:
-Open quotes are matched with closed quotes.
-
-### TwitterHandleAutolink
-
-A Twitter autolink handler. Renders `@handle` as `https://twitter.com/@handle` link
-
-See [Inline Parsing Example](https://commonmark.thephpleague.com/customization/inline-parsing/#example-1---twitter-handles)
-
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
@@ -66,10 +60,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 $ composer test
 ```
 
-## Contributing
-
-New features and extensions are welcome! Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
 ## Security
 
 If you discover any security related issues, please email colinodell@gmail.com instead of using the issue tracker.
@@ -77,7 +67,6 @@ If you discover any security related issues, please email colinodell@gmail.com i
 ## Credits
 
 - [Colin O'Dell][link-author]
-- [John MacFarlane][link-jgm]
 - [All Contributors][link-contributors]
 
 ## License
@@ -99,4 +88,3 @@ This library is licensed under the BSD-3 license.  See the [License File](LICENS
 [link-author]: https://github.com/colinodell
 [link-contributors]: ../../contributors
 [link-league-commonmark]: https://github.com/thephpleague/commonmark
-[link-jgm]: https://github.com/jgm
