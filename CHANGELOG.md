@@ -4,6 +4,8 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+## [0.2.0] - 2019-03-14
+
 **All previous functionality has been removed and placed into separate packages!** This library now serves as a meta-package to pull in officially-recommended extensions.
 
 ### Added
@@ -54,7 +56,8 @@ All Notable changes to `commonmark-extras` will be documented in this file
 ### Changed
  - Minor refactoring to SmartPunct's `QuoteParser` to reduce complexity
 
-[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.1.5...HEAD
+[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.2.0...HEAD
+[0.2.0]: https://github.com/thephpleague/commonmark-extras/compare/0.1.4...0.2.0
 [0.1.5]: https://github.com/thephpleague/commonmark-extras/compare/0.1.4...0.1.5
 [0.1.4]: https://github.com/thephpleague/commonmark-extras/compare/0.1.3...0.1.4
 [0.1.3]: https://github.com/thephpleague/commonmark/compare/0.1.2...0.1.3

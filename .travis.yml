@@ -12,8 +12,6 @@ env:
     - COMPOSER_FLAGS=""
     - COMPOSER_FLAGS="--prefer-stable --prefer-lowest"
 
-# This triggers builds to run on the new TravisCI infrastructure.
-# See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
 sudo: false
 
 before_script:
@@ -24,4 +22,5 @@ script:
   - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
 
 after_script:
-  - if [[ $TRAVIS_PHP_VERSION != 'hhvm' && $TRAVIS_PHP_VERSION != '7.0' ]]; then php vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover; fi
+    - wget https://github.com/scrutinizer-ci/ocular/releases/download/1.5.2/ocular.phar
+    - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
