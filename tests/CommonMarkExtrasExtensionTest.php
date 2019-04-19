@@ -21,11 +21,11 @@ final class CommonMarkExtrasExtensionTest extends TestCase
     public function testExtension()
     {
         $input = <<<EOT
-"You can contact the author of this library at colinodell@gmail.com or check out his website: https://www.colinodell.com"
+"You can contact the author of this ~~project~~ library at colinodell@gmail.com or check out his website: https://www.colinodell.com"
 EOT;
 
         $expected = <<<EOT
-<p>“You can contact the author of this library at <a href="mailto:colinodell@gmail.com">colinodell@gmail.com</a> or check out his website: <a href="https://www.colinodell.com">https://www.colinodell.com</a>”</p>
+<p>“You can contact the author of this <del>project</del> library at <a href="mailto:colinodell@gmail.com">colinodell@gmail.com</a> or check out his website: <a href="https://www.colinodell.com">https://www.colinodell.com</a>”</p>
 
 EOT;
 

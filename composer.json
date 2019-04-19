@@ -17,6 +17,7 @@
         "php" : "^7.1",
         "league/commonmark": "^0.19.1",
         "league/commonmark-ext-smartpunct": "^0.2",
+        "league/commonmark-ext-strikethrough": "^0.4",
         "league/commonmark-ext-autolink": "^0.3"
     },
     "require-dev": {

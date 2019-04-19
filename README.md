@@ -16,6 +16,7 @@ Adding this extension to your project will automatically register these sub-exte
 | :------------ | :---------- |
 | [league/commonmark-ext-autolink](https://github.com/thephpleague/commonmark-ext-autolink) | Automatically creating links to URLs and email address (without needing the `<...>` syntax) |
 | [league/commonmark-ext-smartpunct](https://github.com/thephpleague/commonmark-ext-smartpunct) | Intelligently converts ASCII quotes, dashes, and ellipses to their Unicode equivalents |
+| [league/commonmark-ext-strikethrough](https://github.com/thephpleague/commonmark-ext-strikethrough) | Adds support for `~~strikethrough~~` syntax |
 
 ## Install
 
