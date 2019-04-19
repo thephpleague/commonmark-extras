@@ -4,6 +4,8 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+## [0.4.0] - 2019-04-19
+
 ### Added
 
  - Added support for [league/commonmark-ext-strikethrough v0.4.0](https://github.com/thephpleague/commonmark-ext-strikethrough/releases/tag/v0.4.0)
@@ -72,7 +74,8 @@ All Notable changes to `commonmark-extras` will be documented in this file
 ### Changed
  - Minor refactoring to SmartPunct's `QuoteParser` to reduce complexity
 
-[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.3.0...HEAD
+[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.4.0...HEAD
+[0.4.0]: https://github.com/thephpleague/commonmark-extras/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/thephpleague/commonmark-extras/compare/0.2.1...0.3.0
 [0.2.1]: https://github.com/thephpleague/commonmark-extras/compare/0.2.0...0.2.1
 [0.2.0]: https://github.com/thephpleague/commonmark-extras/compare/0.1.4...0.2.0
