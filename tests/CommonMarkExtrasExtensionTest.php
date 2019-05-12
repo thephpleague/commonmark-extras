@@ -22,10 +22,22 @@ final class CommonMarkExtrasExtensionTest extends TestCase
     {
         $input = <<<EOT
 "You can contact the author of this ~~project~~ library at colinodell@gmail.com or check out his website: https://www.colinodell.com"
+
+Don't forget to:
+
+ - [ ] Star this repository
+ - [x] Keep on being awesome!
 EOT;
 
         $expected = <<<EOT
 <p>“You can contact the author of this <del>project</del> library at <a href="mailto:colinodell@gmail.com">colinodell@gmail.com</a> or check out his website: <a href="https://www.colinodell.com">https://www.colinodell.com</a>”</p>
+<p>Don’t forget to:</p>
+<ul>
+<li>
+<input disabled="" type="checkbox" /> Star this repository</li>
+<li>
+<input disabled="" type="checkbox" checked="" /> Keep on being awesome!</li>
+</ul>
 
 EOT;
 

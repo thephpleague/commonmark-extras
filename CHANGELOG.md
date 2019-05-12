@@ -4,6 +4,10 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+### Added
+
+ - Added GFM-style task list support via [league/commonmark-ext-task-list v0.1.0](https://github.com/thephpleague/commonmark-ext-task-list/releases/tag/v0.1.0)
+
 ## [0.4.0] - 2019-04-19
 
 ### Added
