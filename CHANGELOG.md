@@ -4,6 +4,8 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+## [0.5.0] - 2019-05-12
+
 ### Added
 
  - Added GFM-style task list support via [league/commonmark-ext-task-list v0.1.0](https://github.com/thephpleague/commonmark-ext-task-list/releases/tag/v0.1.0)
@@ -78,7 +80,8 @@ All Notable changes to `commonmark-extras` will be documented in this file
 ### Changed
  - Minor refactoring to SmartPunct's `QuoteParser` to reduce complexity
 
-[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.4.0...HEAD
+[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/0.5.0...HEAD
+[0.5.0]: https://github.com/thephpleague/commonmark-extras/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/thephpleague/commonmark-extras/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/thephpleague/commonmark-extras/compare/0.2.1...0.3.0
 [0.2.1]: https://github.com/thephpleague/commonmark-extras/compare/0.2.0...0.2.1
