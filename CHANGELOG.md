@@ -4,6 +4,10 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+### Changed
+
+ - Made this extension compatible with `league/commonmark` 1.0.0-beta1
+
 ## [0.5.0] - 2019-05-12
 
 ### Added
