@@ -16,9 +16,9 @@
     "require": {
         "php" : "^7.1",
         "league/commonmark": "^1.0.0-beta4",
-        "league/commonmark-ext-autolink": "^1.0-beta",
-        "league/commonmark-ext-smartpunct": "^1.0-beta",
-        "league/commonmark-ext-strikethrough": "^1.0-beta",
+        "league/commonmark-ext-autolink": "^1.0.0-beta2",
+        "league/commonmark-ext-smartpunct": "^1.0.0-beta2",
+        "league/commonmark-ext-strikethrough": "^1.0.0-beta2",
         "league/commonmark-ext-task-list": "^1.0-beta"
     },
     "require-dev": {
