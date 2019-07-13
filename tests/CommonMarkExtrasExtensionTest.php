@@ -23,6 +23,10 @@ final class CommonMarkExtrasExtensionTest extends TestCase
         $input = <<<EOT
 "You can contact the author of this ~~project~~ library at colinodell@gmail.com or check out his website: https://www.colinodell.com"
 
+| My Favorite CommonMark Parsers |
+| ------------------------------ |
+| `league/commonmark`            |
+
 Don't forget to:
 
  - [ ] Star this repository
@@ -31,6 +35,18 @@ EOT;
 
         $expected = <<<EOT
 <p>“You can contact the author of this <del>project</del> library at <a href="mailto:colinodell@gmail.com">colinodell@gmail.com</a> or check out his website: <a href="https://www.colinodell.com">https://www.colinodell.com</a>”</p>
+<table>
+<thead>
+<tr>
+<th>My Favorite CommonMark Parsers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>league/commonmark</code></td>
+</tr>
+</tbody>
+</table>
 <p>Don’t forget to:</p>
 <ul>
 <li>

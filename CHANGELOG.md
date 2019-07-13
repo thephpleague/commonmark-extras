@@ -4,6 +4,12 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+## [1.1.0] - 2019-07-13
+
+### Added
+
+ - Added table parsing functionality via [league/commonmark-ext-table v2.0.0](https://github.com/thephpleague/commonmark-ext-table/releases/tag/v2.0.0)
+
 ## [1.0.0] - 2019-06-29
 
 No changes have been introduced since 1.0.0-beta2.
@@ -96,7 +102,8 @@ No changes have been introduced since 1.0.0-beta2.
 ### Changed
  - Minor refactoring to SmartPunct's `QuoteParser` to reduce complexity
 
-[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/1.0.0...HEAD
+[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/thephpleague/commonmark-extras/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/thephpleague/commonmark-extras/compare/1.0.0-beta2...1.0.0
 [1.0.0-beta2]: https://github.com/thephpleague/commonmark-extras/compare/1.0.0-beta1...1.0.0-beta2
 [1.0.0-beta1]: https://github.com/thephpleague/commonmark-extras/compare/0.5.0...1.0.0-beta1
