@@ -49,10 +49,8 @@ EOT;
 </table>
 <p>Don’t forget to:</p>
 <ul>
-<li>
-<input disabled="" type="checkbox" /> Star this repository</li>
-<li>
-<input disabled="" type="checkbox" checked="" /> Keep on being awesome!</li>
+<li><input disabled="" type="checkbox"> Star this repository</li>
+<li><input checked="" disabled="" type="checkbox"> Keep on being awesome!</li>
 </ul>
 
 EOT;
