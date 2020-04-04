@@ -4,6 +4,12 @@ All Notable changes to `commonmark-extras` will be documented in this file
 
 ## [Unreleased][unreleased]
 
+## [1.2.0] - 2020-04-04
+
+### Deprecated
+
+**This extension has been deprecated**.  All of its functionality now exists in league/commonmark 1.3+ as `GithubFlavoredMarkdownExtension`.
+
 ## [1.1.0] - 2019-07-13
 
 ### Added
@@ -102,7 +108,8 @@ No changes have been introduced since 1.0.0-beta2.
 ### Changed
  - Minor refactoring to SmartPunct's `QuoteParser` to reduce complexity
 
-[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/1.1.0...HEAD
+[unreleased]: https://github.com/thephpleague/commonmark-extras/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/thephpleague/commonmark-extras/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/thephpleague/commonmark-extras/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/thephpleague/commonmark-extras/compare/1.0.0-beta2...1.0.0
 [1.0.0-beta2]: https://github.com/thephpleague/commonmark-extras/compare/1.0.0-beta1...1.0.0-beta2

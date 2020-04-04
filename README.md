@@ -7,6 +7,12 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
+## DEPRECATED
+
+**This extension has been deprecated**.  All of its functionality now exists in [`league/commonmark`][link-league-commonmark] 1.3+.  You can either register the various extensions individually or use the `GithubFlavoredMarkdownExtension` to get full GFM functionality, so you should upgrade to that version of `league/commonmark` and use that instead of this one.
+
+## Overview
+
 **league/commonmark-extras** is a collection of useful GFM extensions and utilities
 for the [league/commonmark][link-league-commonmark] project.
 
